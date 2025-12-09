@@ -1,0 +1,64 @@
+{
+  "version": "1.5.1",
+  "created": "2025-10-14T10:57:32.151382+00:00",
+  "heartrate": {
+    "description": "running average sampled every 10 seconds",
+    "errors": [
+      {
+        "name": "InvalidDataError",
+        "description": "Couldn't calculate heartrate: Data contains NaN values",
+        "cause": "cannot convert float NaN to integer"
+      }
+    ],
+    "units": {
+      "time": "ms",
+      "hrv": "ms",
+      "rate": "bpm"
+    },
+    "measurements": [],
+    "trends": {
+      "hrv": {
+        "average": null
+      },
+      "rate": {
+        "average": null
+      }
+    }
+  },
+  "gIndex": {
+    "errors": [
+      {
+        "name": "InsufficientDataError",
+        "description": "G-Index calculation requires > 75000 samples: received 2119 samples",
+        "cause": "Input data length for g_index computation too low. The input data must be at least 30 seconds, while input was 8 seconds."
+      }
+    ],
+    "measurements": [],
+    "description": "G-Index values",
+    "units": {
+      "index": null,
+      "time": "ms"
+    },
+    "trends": {
+      "average": null
+    }
+  },
+  "brainPulsatility": {
+    "errors": [
+      {
+        "name": "InsufficientDataError",
+        "description": "Brain pulsatility calculation requires > 75000 samples: received 2119 samples",
+        "cause": "Input data length for brain_pulsatility computation too low. The input data must be at least 30 seconds, while input was 8 seconds."
+      }
+    ],
+    "measurements": [],
+    "description": "Brain pulsatility values",
+    "units": {
+      "pulsatility": null,
+      "time": "ms"
+    },
+    "trends": {
+      "average": null
+    }
+  }
+}
