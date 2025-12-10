@@ -38,7 +38,6 @@ export interface MetricsFile {
   heartrate: HeartrateMetric;
 
   // For now we don’t strictly type these.
-  // We know they exist, but we let TypeScript chill.
   gIndex: any;
   brainPulsatility: any;
 }

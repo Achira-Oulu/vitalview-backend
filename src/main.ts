@@ -6,7 +6,10 @@ async function bootstrap() {
 
    // Enable CORS so Angular (http://localhost:4200) can talk to Nest
   app.enableCors({
-    origin: 'http://localhost:4200',
+    origin:[
+      'http://localhost:4200',
+      'https://vitalview-backend.onrender.com'
+    ]
   });
   
   // await app.listen(process.env.PORT ?? 3000);
