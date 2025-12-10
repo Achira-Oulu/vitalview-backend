@@ -8,11 +8,12 @@ async function bootstrap() {
   app.enableCors({
     origin:[
       'http://localhost:4200',
-      'https://vitalview-backend.onrender.com'
+      'https://vitalview-frontend.netlify.app',
     ]
   });
   
+
   // await app.listen(process.env.PORT ?? 3000);
-    await app.listen(3000);
+    await app.listen(process.env.PORT || 3000);
 }
 bootstrap();
